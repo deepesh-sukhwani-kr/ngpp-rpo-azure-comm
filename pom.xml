@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.kroger.ngpp</groupId>
+		<artifactId>ngpp-pom</artifactId>
+		<version>2.1.2</version>
+		<relativePath/>
+	</parent>
+
+	<groupId>com.kroger.ngpp</groupId>
+	<artifactId>ngpp-rpo-azure-comm</artifactId>
+	<version>0.0.1</version>
+	<name>ngpp-rpo-azure-comm</name>
+	<description>Regular price optimization azure communication library to hold all common activities across in-market, objective and settings to communicate with 84.51 azure</description>
+	<packaging>jar</packaging>
+
+	<properties>
+		<skip.boot.plugin>true</skip.boot.plugin>
+		<jacoco.line.coveredratio.minimum>0.07</jacoco.line.coveredratio.minimum>
+		<jacoco.branch.coveredratio.minimum>0.08</jacoco.branch.coveredratio.minimum>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.kroger.commons</groupId>
+			<artifactId>kroger-boot-starter-data</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.kroger.commons</groupId>
+			<artifactId>kroger-boot-starter-security-oauth</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-common</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.kroger.dcp.echoclient</groupId>
+			<artifactId>echo-logback-classic-appender</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.kroger.commons</groupId>
+			<artifactId>kroger-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>5.3.1.Final</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
