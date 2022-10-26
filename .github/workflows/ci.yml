@@ -3,9 +3,9 @@ on:
   push:
     branches:
       - 'master'
-      - '!feature/**'
-      - '!release/**'
-      - '!develop**'
+      - 'feature/**'
+      - 'release/**'
+      - 'develop**'
 
 env:
   APP_NAME: ${{ github.event.repository.name }}
@@ -42,6 +42,10 @@ jobs:
 
       - name: Publish to Artifactory
         run: |
+          tagName="FINAL"
+          if ${{ github.ref_name != 'master' }}; then
+            tagName="SNAPSHOT"
+          fi
           jfrog config add --url=https://krogertechnology.jfrog.io --user=${{env.ARTIFACTORY_SAAS_USERNAME}} --password=${{env.ARTIFACTORY_SAAS_TOKEN}} --interactive=false artifactory
           jfrog rt mvn-config --repo-deploy-releases kroger-software-engineering --repo-deploy-snapshots kroger-software-engr-snap
-          jfrog rt mvn clean install --settings settings.xml --build-name $GITHUB_REPOSITORY --build-number $GITHUB_RUN_ID-$GITHUB_RUN_NUMBER
+          jfrog rt mvn clean install --settings settings.xml --build-name $GITHUB_REPOSITORY --build-number $GITHUB_RUN_ID-$GITHUB_RUN_NUMBER -Dsnapshot.tag=$tagName

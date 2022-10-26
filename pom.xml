@@ -12,7 +12,7 @@
 
 	<groupId>com.kroger.ngpp</groupId>
 	<artifactId>ngpp-rpo-azure-comm</artifactId>
-	<version>0.0.1</version>
+	<version>1.0.0-${snapshot.tag}</version>
 	<name>ngpp-rpo-azure-comm</name>
 	<description>Regular price optimization azure communication library to hold all common activities across in-market, objective and settings to communicate with 84.51 azure</description>
 	<packaging>jar</packaging>
@@ -21,6 +21,7 @@
 		<skip.boot.plugin>true</skip.boot.plugin>
 		<jacoco.line.coveredratio.minimum>0.07</jacoco.line.coveredratio.minimum>
 		<jacoco.branch.coveredratio.minimum>0.08</jacoco.branch.coveredratio.minimum>
+		<snapshot.tag>SNAPSHOT</snapshot.tag>
 	</properties>
 
 	<dependencies>
@@ -68,7 +69,27 @@
 			<artifactId>hibernate-validator</artifactId>
 			<version>5.3.1.Final</version>
 		</dependency>
-
+		<dependency>
+			<groupId>com.azure</groupId>
+			<artifactId>azure-storage-blob</artifactId>
+			<version>12.14.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.kroger.ngpp</groupId>
+			<artifactId>ngpp-rpo-common</artifactId>
+			<version>1.0.0-FINAL</version>
+		</dependency>
+		<dependency>
+			<groupId>io.projectreactor</groupId>
+			<artifactId>reactor-core</artifactId>
+			<version>3.4.13</version>
+		</dependency>
+		<dependency>
+			<groupId>io.projectreactor</groupId>
+			<artifactId>reactor-test</artifactId>
+			<version>3.4.13</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
