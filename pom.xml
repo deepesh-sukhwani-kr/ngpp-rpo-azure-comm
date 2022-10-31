@@ -77,7 +77,7 @@
 		<dependency>
 			<groupId>com.kroger.ngpp</groupId>
 			<artifactId>ngpp-rpo-common</artifactId>
-			<version>1.0.0-FINAL</version>
+			<version>1.0.0-${snapshot.tag}</version>
 		</dependency>
 		<dependency>
 			<groupId>io.projectreactor</groupId>
