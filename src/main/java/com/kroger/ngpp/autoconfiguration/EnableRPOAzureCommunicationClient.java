@@ -1,5 +1,6 @@
 package com.kroger.ngpp.autoconfiguration;
 
+import com.kroger.ngpp.common.config.EnableRPOCommonClient;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Import;
 
@@ -12,5 +13,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 @Import(RPOAzureCommConfiguration.class)
 @EnableCaching
+@EnableRPOCommonClient
 public @interface EnableRPOAzureCommunicationClient {
 }
