@@ -3,6 +3,8 @@ package com.kroger.ngpp.ingress.client;
 import com.kroger.ngpp.common.exception.RestTemplateResponseErrorHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.oauth2.client.OAuth2RestTemplate;
 import org.springframework.stereotype.Service;
@@ -21,6 +23,11 @@ public class OAuthRestClient {
     public <T> ResponseEntity<T> invokeGetOperation(String urlString, Class<T> clazz) {
         setClientProperties();
         return oAuth2RestTemplate.getForEntity(urlString, clazz);
+    }
+
+    public <T> ResponseEntity<T> invokePutOperation(String urlString, HttpEntity<?> body, Class<T> clazz) {
+        setClientProperties();
+        return oAuth2RestTemplate.exchange(urlString, HttpMethod.PUT, body, clazz);
     }
 
     private void setClientProperties() {
