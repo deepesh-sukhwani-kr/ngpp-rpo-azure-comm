@@ -12,7 +12,8 @@
 
 	<groupId>com.kroger.ngpp</groupId>
 	<artifactId>ngpp-rpo-azure-comm</artifactId>
-	<version>1.0.3-${snapshot.tag}</version>
+    <!-- Make sure to increment the version everytime you merge to MASTER branch	-->
+	<version>1.0.4-${snapshot.tag}</version>
 	<name>ngpp-rpo-azure-comm</name>
 	<description>Regular price optimization azure communication library to hold all common activities across in-market, objective and settings to communicate with 84.51 azure</description>
 	<packaging>jar</packaging>
@@ -74,7 +75,9 @@
 			<artifactId>azure-storage-blob</artifactId>
 			<version>12.14.2</version>
 		</dependency>
-        <!--	Update ngpp-rpo-common version to *.*.*-SNAPSHOT inorder work in non-master branches	-->
+        <!--	Update ngpp-rpo-common version to *.*.*-SNAPSHOT inorder to work in non-master branches	-->
+		<!--	non-master branches of ngpp-rpo-common always creates SNAPSHOT version eg. 1.0.5-SNAPSHOT	-->
+		<!--	Only master builds(pipelines) create FINA version eg. 1.0.5-FINAL	-->
 		<dependency>
 			<groupId>com.kroger.ngpp</groupId>
 			<artifactId>ngpp-rpo-common</artifactId>
