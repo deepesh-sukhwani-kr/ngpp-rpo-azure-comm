@@ -74,10 +74,11 @@
 			<artifactId>azure-storage-blob</artifactId>
 			<version>12.14.2</version>
 		</dependency>
+        <!--	Update ngpp-rpo-common version to *.*.*-SNAPSHOT inorder work in non-master branches	-->
 		<dependency>
 			<groupId>com.kroger.ngpp</groupId>
 			<artifactId>ngpp-rpo-common</artifactId>
-			<version>1.0.4-FINAL</version>
+			<version>1.0.5-FINAL</version>
 		</dependency>
 		<dependency>
 			<groupId>io.projectreactor</groupId>
