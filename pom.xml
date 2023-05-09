@@ -81,7 +81,7 @@
 		<dependency>
 			<groupId>com.kroger.ngpp</groupId>
 			<artifactId>ngpp-rpo-common</artifactId>
-			<version>1.0.5-FINAL</version>
+			<version>1.0.6-FINAL</version>
 		</dependency>
 		<dependency>
 			<groupId>io.projectreactor</groupId>
