@@ -13,7 +13,7 @@
 	<groupId>com.kroger.ngpp</groupId>
 	<artifactId>ngpp-rpo-azure-comm</artifactId>
     <!-- Make sure to increment the version everytime you merge to MASTER branch	-->
-	<version>1.0.8-${snapshot.tag}</version>
+	<version>1.0.9-${snapshot.tag}</version>
 	<name>ngpp-rpo-azure-comm</name>
 	<description>Regular price optimization azure communication library to hold all common activities across in-market, objective and settings to communicate with 84.51 azure</description>
 	<packaging>jar</packaging>
@@ -81,7 +81,7 @@
 		<dependency>
 			<groupId>com.kroger.ngpp</groupId>
 			<artifactId>ngpp-rpo-common</artifactId>
-			<version>1.0.9-FINAL</version>
+			<version>1.0.10-FINAL</version>
 		</dependency>
 		<dependency>
 			<groupId>io.projectreactor</groupId>
