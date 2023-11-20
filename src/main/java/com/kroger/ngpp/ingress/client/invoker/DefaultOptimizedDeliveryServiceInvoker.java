@@ -2,13 +2,13 @@ package com.kroger.ngpp.ingress.client.invoker;
 
 import com.kroger.dcp.echoclient.EventType;
 import com.kroger.desp.events.effo.data.ready.EffoDataReady;
+//import com.kroger.ngpp.boot.autoconfigure.security.oauth.WebClientWrapper;
+import com.kroger.ngpp.common.boot.autoconfigure.security.oauth.WebClientWrapper;
 import com.kroger.ngpp.common.logging.IRegularPriceOptimizationLogger;
-import com.kroger.ngpp.ingress.client.OAuthRestClient;
 import com.kroger.ngpp.ingress.client.builder.UrlBuilder;
 import com.kroger.ngpp.ingress.model.OptimizedDeliveryModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.ResponseEntity;
 
 import java.util.HashMap;
 
@@ -23,7 +23,7 @@ public class DefaultOptimizedDeliveryServiceInvoker implements OptimizedDelivery
     private String urlString;
 
     @Autowired
-    private OAuthRestClient restClient;
+    private WebClientWrapper webClient;
 
     @Autowired
     private UrlBuilder builder;
@@ -32,7 +32,7 @@ public class DefaultOptimizedDeliveryServiceInvoker implements OptimizedDelivery
     IRegularPriceOptimizationLogger logger;
 
     @Override
-    public ResponseEntity<OptimizedDeliveryModel> getOptimizedDeliveryResponse(
+    public OptimizedDeliveryModel getOptimizedDeliveryResponse(
             EffoDataReady model) {
         String qualifiedUrl = builder.buildIngresControllerURL(
                 builder.mapQueryParameters(model),
@@ -46,8 +46,8 @@ public class DefaultOptimizedDeliveryServiceInvoker implements OptimizedDelivery
                     put(RUN_TYPE.asString(), model.getPayload().getRunType());
                 }}
         );
-        ResponseEntity<OptimizedDeliveryModel> response = restClient.invokeGetOperation(
-                qualifiedUrl, OptimizedDeliveryModel.class);
+        OptimizedDeliveryModel response = webClient.GET("optimizationService",
+                qualifiedUrl, OptimizedDeliveryModel.class).block();
         return response;
     }
 

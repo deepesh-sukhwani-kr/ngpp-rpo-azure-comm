@@ -6,14 +6,14 @@
 	<parent>
 		<groupId>com.kroger.ngpp</groupId>
 		<artifactId>ngpp-pom</artifactId>
-		<version>2.1.2</version>
+		<version>5.7.2-SNAPSHOT</version>
 		<relativePath/>
 	</parent>
 
 	<groupId>com.kroger.ngpp</groupId>
 	<artifactId>ngpp-rpo-azure-comm</artifactId>
     <!-- Make sure to increment the version everytime you merge to MASTER branch	-->
-	<version>1.0.8-${snapshot.tag}</version>
+	<version>5.7.2-SNAPSHOT</version>
 	<name>ngpp-rpo-azure-comm</name>
 	<description>Regular price optimization azure communication library to hold all common activities across in-market, objective and settings to communicate with 84.51 azure</description>
 	<packaging>jar</packaging>
@@ -46,6 +46,7 @@
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-common</artifactId>
+			<version>1.7.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.kroger.dcp.echoclient</groupId>
@@ -68,12 +69,12 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>
-			<version>5.3.1.Final</version>
+			<version>8.0.0.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>com.azure</groupId>
 			<artifactId>azure-storage-blob</artifactId>
-			<version>12.14.2</version>
+			<version>12.23.0</version>
 		</dependency>
         <!--	Update ngpp-rpo-common version to *.*.*-SNAPSHOT inorder to work in non-master branches	-->
 		<!--	non-master branches of ngpp-rpo-common always creates SNAPSHOT version eg. 1.0.5-SNAPSHOT	-->
@@ -81,7 +82,7 @@
 		<dependency>
 			<groupId>com.kroger.ngpp</groupId>
 			<artifactId>ngpp-rpo-common</artifactId>
-			<version>1.0.9-FINAL</version>
+			<version>5.7.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>io.projectreactor</groupId>
@@ -93,6 +94,17 @@
 			<artifactId>reactor-test</artifactId>
 			<version>3.4.13</version>
 			<scope>test</scope>
+		</dependency>
+		<!-- WebClient -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webflux</artifactId>
+		</dependency>
+		<!-- Resolving High vulnerability -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-autoconfigure</artifactId>
+			<version>2.7.12</version>
 		</dependency>
 	</dependencies>
 

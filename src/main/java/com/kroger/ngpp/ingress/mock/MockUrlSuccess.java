@@ -16,11 +16,11 @@ public class MockUrlSuccess implements OptimizedDeliveryServiceInvoker {
     }
 
     @Override
-    public ResponseEntity<OptimizedDeliveryModel> getOptimizedDeliveryResponse(
+    public OptimizedDeliveryModel getOptimizedDeliveryResponse(
             EffoDataReady model) {
         OptimizedDeliveryModel response = OptimizedDeliveryModel.builder()
                 .blobUrlList(Arrays.asList(urls))
                 .build();
-        return ResponseEntity.ok(response);
+        return response;
     }
 }
