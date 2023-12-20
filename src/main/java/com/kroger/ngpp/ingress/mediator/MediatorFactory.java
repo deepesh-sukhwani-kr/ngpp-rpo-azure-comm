@@ -1,6 +1,5 @@
 package com.kroger.ngpp.ingress.mediator;
 
-import com.kroger.dcp.echoclient.EventType;
 import com.kroger.ngpp.common.logging.IRegularPriceOptimizationLogger;
 import com.kroger.ngpp.common.utils.OptimizedPriceConstants;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,12 +32,9 @@ public class MediatorFactory {
         BaseMediator mediator = mediatorsCache.get(type);
         if (mediator == null) {
             String errorMessage = ECHO_CHECKPOINT + "Unknown run type: " + type;
-            logger.sendMessage(EventType.ERROR,
+            logger.sendMessage("ERROR",
                     "Error: " + errorMessage,
-                    MEDIATOR_FACTORY_RUNTYPE_CHECK_FAILED,
-                    MediatorFactory.class.getSimpleName(), new HashMap<>() {{
-                        put(SERVICE_LOG_KEY.asString(), MEDIATOR_FACTORY_RUNTYPE_CHECK_FAILED.getText());
-                    }}
+                    MediatorFactory.class.getSimpleName(), null
             );
             throw new RuntimeException(errorMessage);
         }

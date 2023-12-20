@@ -1,6 +1,5 @@
 package com.kroger.ngpp.ingress.mapper;
 
-import com.kroger.dcp.echoclient.EventType;
 import com.kroger.ngpp.common.logging.IRegularPriceOptimizationLogger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,12 +26,9 @@ public class HttpResponseMapper<T> implements HttpResponseValidator<T> {
         if (response.getStatusCode() == HttpStatus.OK) {
             return true;
         } else {
-            logger.sendMessage(EventType.ERROR,
+            logger.sendMessage("ERROR",
                     "Something went wrong in Rest service invocation: Service returned status code: " + response.getStatusCode(),
-                    CONSUMER_SERVICE_MAPPED,
-                    HttpResponseMapper.class.getSimpleName(), new HashMap<>() {{
-                        put(RESPONSE_META_DATA.asString(), CONSUMER_SERVICE_MAPPED.getText());
-                    }}
+                    HttpResponseMapper.class.getSimpleName(), null
             );
         }
         return false;
@@ -43,12 +39,9 @@ public class HttpResponseMapper<T> implements HttpResponseValidator<T> {
         if (response.getStatusCode() == HttpStatus.CREATED) {
             return true;
         } else {
-            logger.sendMessage(EventType.ERROR,
+            logger.sendMessage("ERROR",
                     "Something went wrong in Rest service invocation: Service returned status code: " + response.getStatusCode(),
-                    CONSUMER_SERVICE_MAPPED,
-                    HttpResponseMapper.class.getSimpleName(), new HashMap<>() {{
-                        put(RESPONSE_META_DATA.asString(), CONSUMER_SERVICE_MAPPED.getText());
-                    }}
+                    HttpResponseMapper.class.getSimpleName(), null
             );
         }
         return false;
@@ -59,12 +52,9 @@ public class HttpResponseMapper<T> implements HttpResponseValidator<T> {
         if (response.getStatusCode() == HttpStatus.NO_CONTENT) {
             return true;
         } else {
-            logger.sendMessage(EventType.ERROR,
+            logger.sendMessage("ERROR",
                     "Something went wrong in Rest service invocation: Service returned status code: " + response.getStatusCode(),
-                    CONSUMER_SERVICE_MAPPED,
-                    HttpResponseMapper.class.getSimpleName(), new HashMap<>() {{
-                        put(RESPONSE_META_DATA.asString(), CONSUMER_SERVICE_MAPPED.getText());
-                    }}
+                    HttpResponseMapper.class.getSimpleName(), null
             );
         }
         return false;
@@ -75,12 +65,9 @@ public class HttpResponseMapper<T> implements HttpResponseValidator<T> {
         if (response.getStatusCode() == HttpStatus.ACCEPTED) {
             return true;
         } else {
-            logger.sendMessage(EventType.ERROR,
+            logger.sendMessage("ERROR",
                     "Something went wrong in Rest service invocation: Service returned status code: " + response.getStatusCode(),
-                    CONSUMER_SERVICE_MAPPED,
-                    HttpResponseMapper.class.getSimpleName(), new HashMap<>() {{
-                        put(RESPONSE_META_DATA.asString(), CONSUMER_SERVICE_MAPPED.getText());
-                    }}
+                    HttpResponseMapper.class.getSimpleName(), null
             );
         }
         return false;

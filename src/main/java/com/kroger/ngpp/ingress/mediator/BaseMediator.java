@@ -1,6 +1,5 @@
 package com.kroger.ngpp.ingress.mediator;
 
-import com.kroger.dcp.echoclient.EventType;
 import com.kroger.desp.events.effo.data.ready.EffoDataReady;
 import com.kroger.ngpp.common.logging.IRegularPriceOptimizationLogger;
 import com.kroger.ngpp.common.utils.OptimizedPriceUtil;
@@ -37,14 +36,9 @@ public abstract class BaseMediator {
     protected ResponseEntity<OptimizedDeliveryModel> getIngressResponse(EffoDataReady dataReady) {
         ResponseEntity<OptimizedDeliveryModel> response;
         if(!utils.isDataReadyMessageValid(dataReady)) {
-            logger.sendMessage(EventType.INFO,
+            logger.sendMessage("INFO",
                     BATCH_INPUT_VALIDATION_MESSAGE +dataReady,
-                    DATA_READY_MESSAGE_VALIDATION_FAILED,
-                    BaseMediator.class.getSimpleName(), new HashMap<>() {{
-                        put(SERVICE_LOG_KEY.asString(), DATA_READY_MESSAGE_VALIDATION_FAILED.getText());
-                        put(RUN_TYPE.asString(), dataReady.getPayload().getRunType());
-                        put(BATCH_ID.asString(), dataReady.getPayload().getBatchId());
-                    }}
+                    BaseMediator.class.getSimpleName(), null
             );
             throw new RuntimeException(BATCH_INPUT_VALIDATION_MESSAGE +dataReady);
         }
