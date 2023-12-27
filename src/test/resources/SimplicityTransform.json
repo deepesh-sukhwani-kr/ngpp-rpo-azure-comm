@@ -1,0 +1,1131 @@
+[
+  {
+    "hpr_spread_targets": {
+      "CONSIDERATION SET": [
+        null,
+        null
+      ]
+    },
+    "units_weight": 0.8,
+    "t_stop": "20240702",
+    "dollars_weight": 0.1,
+    "cats": [
+      "023"
+    ],
+    "profit_weight": 0.1,
+    "hpr_item_spread_bounds": {
+      "CONSIDERATION SET": [
+        null,
+        null
+      ]
+    },
+    "publish": true,
+    "superzone_name": "Nashville",
+    "units_pct_change_min": -0.001,
+    "second_stage_start": "20231003",
+    "lpr_spread_targets": {
+      "CENTER STORE SIGN POST": [
+        0.04,
+        0.09
+      ]
+    },
+    "execution_date": "2023-07-24",
+    "zones": [
+      "026-0002-00-000",
+      "026-0003-00-000",
+      "026-0004-00-000"
+    ],
+    "t_start": "20230703",
+    "premium_zone_exempt_programs": [
+      "CENTER STORE SIGN POS",
+      "Non-Program"
+    ],
+    "run_type": "in-market",
+    "primary_zone": "026-0002-00-000",
+    "premium_zones": {
+      "706-0003-00-000": [
+        "PREMIUM EXAMPLE",
+        0.05
+      ]
+    }
+  },
+  {
+    "hpr_spread_targets": {
+      "CENTER STORE SIGN POST": [
+        -0.2,
+        -0.1
+      ],
+      "CONSIDERATION SET": [
+        null,
+        null
+      ],
+      "GM CRITICAL": [
+        null,
+        null
+      ],
+      "GROCERY CRITICAL": [
+        -0.15,
+        -0.05
+      ],
+      "HBC BABY CRITICAL": [
+        -0.2,
+        -0.1
+      ],
+      "HBC CRITICAL": [
+        -0.12,
+        -0.02
+      ],
+      "LATINO CRITICAL": [
+        null,
+        null
+      ],
+      "LATINO CRITICAL PRODUCE": [
+        null,
+        null
+      ],
+      "NATURAL FOODS CRITICAL": [
+        -0.18,
+        -0.1
+      ],
+      "NON-PROGRAM": [
+        -0.1,
+        0
+      ],
+      "PACKAGED MEAT CRITICAL": [
+        -0.12,
+        -0.02
+      ],
+      "PRODUCE CRITICAL": [
+        null,
+        null
+      ],
+      "PROGRAM HOLD": [
+        null,
+        null
+      ],
+      "REGNL VPSMNSTRM RLPH STAT": [
+        -0.1,
+        0
+      ],
+      "RELEVANT LIST": [
+        null,
+        null
+      ],
+      "SIMPLE TRUTH": [
+        null,
+        null
+      ],
+      "VALUE": [
+        null,
+        null
+      ]
+    },
+    "units_weight": 0.8,
+    "t_stop": "20240702",
+    "dollars_weight": 0.1,
+    "cats": [
+      "023"
+    ],
+    "profit_weight": 0.1,
+    "hpr_item_spread_bounds": {
+      "CENTER STORE SIGN POST": [
+        -0.2,
+        -0.01
+      ],
+      "CONSIDERATION SET": [
+        null,
+        null
+      ],
+      "GM CRITICAL": [
+        null,
+        null
+      ],
+      "GROCERY CRITICAL": [
+        -0.18,
+        -0.05
+      ],
+      "HBC BABY CRITICAL": [
+        -0.2,
+        -0.07
+      ],
+      "HBC CRITICAL": [
+        -0.15,
+        -0.02
+      ],
+      "LATINO CRITICAL": [
+        null,
+        null
+      ],
+      "LATINO CRITICAL PRODUCE": [
+        null,
+        null
+      ],
+      "NATURAL FOODS CRITICAL": [
+        -0.25,
+        -0.1
+      ],
+      "NON-PROGRAM": [
+        -0.1,
+        0
+      ],
+      "PACKAGED MEAT CRITICAL": [
+        -0.15,
+        -0.02
+      ],
+      "PRODUCE CRITICAL": [
+        null,
+        null
+      ],
+      "PROGRAM HOLD": [
+        null,
+        null
+      ],
+      "REGNL VPSMNSTRM RLPH STAT": [
+        -0.12,
+        0
+      ],
+      "RELEVANT LIST": [
+        null,
+        null
+      ],
+      "SIMPLE TRUTH": [
+        null,
+        null
+      ],
+      "VALUE": [
+        null,
+        null
+      ]
+    },
+    "lpr_item_spread_bounds": {
+      "CENTER STORE SIGN POST": [
+        0.15,
+        0.3
+      ],
+      "CONSIDERATION SET": [
+        null,
+        null
+      ],
+      "GM CRITICAL": [
+        null,
+        null
+      ],
+      "GROCERY CRITICAL": [
+        0.25,
+        0.35
+      ],
+      "HBC BABY CRITICAL": [
+        0.2,
+        0.35
+      ],
+      "HBC CRITICAL": [
+        0.3,
+        0.4
+      ],
+      "NATURAL FOODS CRITICAL": [
+        -0.05,
+        0.05
+      ],
+      "PACKAGED MEAT CRITICAL": [
+        0.3,
+        0.4
+      ],
+      "PRODUCE CRITICAL": [
+        null,
+        null
+      ],
+      "REGNL VPSMNSTRM RLPH STAT": [
+        0.2,
+        0.35
+      ],
+      "RELEVANT LIST": [
+        null,
+        null
+      ],
+      "VALUE": [
+        0.05,
+        0.15
+      ]
+    },
+    "publish": true,
+    "superzone_name": "RAL Vons 0003",
+    "units_pct_change_min": -0.001,
+    "second_stage_start": "20231003",
+    "lpr_spread_targets": {
+      "CENTER STORE SIGN POST": [
+        0.15,
+        0.25
+      ],
+      "CONSIDERATION SET": [
+        null,
+        null
+      ],
+      "GM CRITICAL": [
+        null,
+        null
+      ],
+      "GROCERY CRITICAL": [
+        0.25,
+        0.35
+      ],
+      "HBC BABY CRITICAL": [
+        0.2,
+        0.3
+      ],
+      "HBC CRITICAL": [
+        0.3,
+        0.4
+      ],
+      "NATURAL FOODS CRITICAL": [
+        -0.05,
+        0
+      ],
+      "PACKAGED MEAT CRITICAL": [
+        0.3,
+        0.4
+      ],
+      "PRODUCE CRITICAL": [
+        null,
+        null
+      ],
+      "REGNL VPSMNSTRM RLPH STAT": [
+        0.2,
+        0.3
+      ],
+      "RELEVANT LIST": [
+        null,
+        null
+      ],
+      "VALUE": [
+        0.05,
+        0.1
+      ]
+    },
+    "execution_date": "2023-07-24",
+    "zones": [
+      "703-0003-00-000"
+    ],
+    "t_start": "20230703",
+    "special_spread_targets": {
+      "WHOLE FOODS": {
+        "SIMPLE TRUTH": [
+          -0.18,
+          -0.1
+        ]
+      }
+    },
+    "special_item_spread_bounds": {
+      "WHOLE FOODS": {
+        "SIMPLE TRUTH": [
+          -0.25,
+          -0.1
+        ]
+      }
+    },
+    "run_type": "in-market",
+    "primary_zone": "703-0003-00-000"
+  },
+  {
+    "hpr_spread_targets": {
+      "CENTER STORE SIGN POST": [
+        -0.05,
+        0
+      ],
+      "CONSIDERATION SET": [
+        null,
+        null
+      ],
+      "GM CRITICAL": [
+        null,
+        null
+      ],
+      "GROCERY CRITICAL": [
+        -0.03,
+        0.05
+      ],
+      "HBC BABY CRITICAL": [
+        -0.05,
+        0
+      ],
+      "HBC CRITICAL": [
+        -0.03,
+        0.05
+      ],
+      "LATINO CRITICAL": [
+        null,
+        null
+      ],
+      "LATINO CRITICAL PRODUCE": [
+        null,
+        null
+      ],
+      "NATURAL FOODS CRITICAL": [
+        -0.18,
+        -0.1
+      ],
+      "NON-PROGRAM": [
+        null,
+        0.05
+      ],
+      "PACKAGED MEAT CRITICAL": [
+        0,
+        0.07
+      ],
+      "PRODUCE CRITICAL": [
+        null,
+        null
+      ],
+      "PROGRAM HOLD": [
+        null,
+        null
+      ],
+      "RELEVANT LIST": [
+        null,
+        null
+      ],
+      "SIMPLE TRUTH": [
+        null,
+        null
+      ],
+      "VALUE": [
+        null,
+        null
+      ]
+    },
+    "units_weight": 0.8,
+    "t_stop": "20240702",
+    "dollars_weight": 0.1,
+    "cats": [
+      "023"
+    ],
+    "profit_weight": 0.1,
+    "hpr_item_spread_bounds": {
+      "CENTER STORE SIGN POST": [
+        -0.05,
+        0.05
+      ],
+      "CONSIDERATION SET": [
+        null,
+        null
+      ],
+      "GM CRITICAL": [
+        null,
+        null
+      ],
+      "GROCERY CRITICAL": [
+        -0.05,
+        0.1
+      ],
+      "HBC BABY CRITICAL": [
+        -0.05,
+        0.05
+      ],
+      "HBC CRITICAL": [
+        -0.05,
+        0.1
+      ],
+      "LATINO CRITICAL": [
+        null,
+        null
+      ],
+      "LATINO CRITICAL PRODUCE": [
+        null,
+        null
+      ],
+      "NATURAL FOODS CRITICAL": [
+        -0.25,
+        -0.1
+      ],
+      "NON-PROGRAM": [
+        null,
+        0.05
+      ],
+      "PACKAGED MEAT CRITICAL": [
+        0,
+        0.12
+      ],
+      "PRODUCE CRITICAL": [
+        null,
+        null
+      ],
+      "PROGRAM HOLD": [
+        null,
+        null
+      ],
+      "RELEVANT LIST": [
+        null,
+        null
+      ],
+      "SIMPLE TRUTH": [
+        null,
+        null
+      ],
+      "VALUE": [
+        null,
+        null
+      ]
+    },
+    "lpr_item_spread_bounds": {
+      "CENTER STORE SIGN POST": [
+        0.05,
+        0.12
+      ],
+      "CONSIDERATION SET": [
+        null,
+        null
+      ],
+      "HBC BABY CRITICAL": [
+        0.05,
+        0.15
+      ],
+      "HBC CRITICAL": [
+        0.2,
+        0.32
+      ],
+      "GM CRITICAL": [
+        null,
+        null
+      ],
+      "GROCERY CRITICAL": [
+        0.12,
+        0.24
+      ],
+      "NATURAL FOODS CRITICAL": [
+        -0.05,
+        0.05
+      ],
+      "PACKAGED MEAT CRITICAL": [
+        0.2,
+        0.32
+      ],
+      "PRODUCE CRITICAL": [
+        null,
+        null
+      ],
+      "RELEVANT LIST": [
+        null,
+        null
+      ]
+    },
+    "publish": true,
+    "superzone_name": "RAL Staters 0230",
+    "units_pct_change_min": -0.001,
+    "second_stage_start": "20231003",
+    "lpr_spread_targets": {
+      "CENTER STORE SIGN POST": [
+        0.05,
+        0.12
+      ],
+      "CONSIDERATION SET": [
+        null,
+        null
+      ],
+      "HBC BABY CRITICAL": [
+        0.05,
+        0.12
+      ],
+      "HBC CRITICAL": [
+        0.2,
+        0.28
+      ],
+      "GM CRITICAL": [
+        null,
+        null
+      ],
+      "GROCERY CRITICAL": [
+        0.12,
+        0.2
+      ],
+      "NATURAL FOODS CRITICAL": [
+        -0.05,
+        0
+      ],
+      "PACKAGED MEAT CRITICAL": [
+        0.2,
+        0.28
+      ],
+      "PRODUCE CRITICAL": [
+        null,
+        null
+      ],
+      "RELEVANT LIST": [
+        null,
+        null
+      ]
+    },
+    "execution_date": "2023-07-24",
+    "zones": [
+      "703-0230-00-000"
+    ],
+    "t_start": "20230703",
+    "special_spread_targets": {
+      "WHOLE FOODS": {
+        "SIMPLE TRUTH": [
+          -0.18,
+          -0.1
+        ]
+      }
+    },
+    "special_item_spread_bounds": {
+      "WHOLE FOODS": {
+        "SIMPLE TRUTH": [
+          -0.25,
+          -0.1
+        ]
+      }
+    },
+    "run_type": "in-market",
+    "primary_zone": "703-0230-00-000"
+  },
+  {
+    "units_weight": 0.8,
+    "cats": [
+      "023"
+    ],
+    "profit_weight": 0.1,
+    "execution_date": "2023-07-24",
+    "lpr_item_spread_bounds": {
+      "GM CRITICAL": [
+        0,
+        0.1
+      ],
+      "GROCERY CRITICAL": [
+        0,
+        0.15
+      ],
+      "PRODUCE CRITICAL": [
+        0,
+        0.1
+      ]
+    },
+    "publish": true,
+    "superzone_name": "Richmond 0001",
+    "t_stop": "20240702",
+    "run_type": "in-market",
+    "primary_zone": "029-0001-00-000",
+    "t_start": "20230703",
+    "zones": [
+      "029-0001-00-000",
+      "029-0002-00-000"
+    ],
+    "second_stage_start": "20231003",
+    "units_pct_change_min": -0.001,
+    "dollars_weight": 0.1,
+    "lpr_spread_targets": {
+      "GM CRITICAL": [
+        0,
+        0.05
+      ],
+      "GROCERY CRITICAL": [
+        0,
+        0.1
+      ],
+      "PRODUCE CRITICAL": [
+        0,
+        0.05
+      ]
+    }
+  },
+  {
+    "units_weight": 0.8,
+    "cats": [
+      "023"
+    ],
+    "profit_weight": 0.1,
+    "execution_date": "2023-07-24",
+    "lpr_item_spread_bounds": {
+      "CONSIDERATION SET": [
+        0.05,
+        0.15
+      ],
+      "GM CRITICAL": [
+        0,
+        0.15
+      ],
+      "GROCERY CRITICAL": [
+        0,
+        0.15
+      ],
+      "PRODUCE CRITICAL": [
+        0,
+        0.15
+      ]
+    },
+    "publish": true,
+    "superzone_name": "Dallas",
+    "t_stop": "20240702",
+    "run_type": "in-market",
+    "primary_zone": "035-0074-00-000",
+    "t_start": "20230703",
+    "zones": [
+      "035-0074-00-000",
+      "035-0071-00-000"
+    ],
+    "second_stage_start": "20231003",
+    "units_pct_change_min": -0.001,
+    "dollars_weight": 0.1,
+    "lpr_spread_targets": {
+      "CONSIDERATION SET": [
+        0.05,
+        0.15
+      ],
+      "GM CRITICAL": [
+        0,
+        0.1
+      ],
+      "GROCERY CRITICAL": [
+        0,
+        0.1
+      ],
+      "PRODUCE CRITICAL": [
+        0,
+        0.1
+      ]
+    }
+  },
+  {
+    "units_weight": 0.8,
+    "cats": [
+      "023"
+    ],
+    "profit_weight": 0.1,
+    "execution_date": "2023-07-24",
+    "publish": true,
+    "markup_min": 0.1,
+    "superzone_name": "FM 0430",
+    "t_stop": "20240702",
+    "run_type": "in-market",
+    "primary_zone": "701-0430-00-000",
+    "t_start": "20230703",
+    "zones": [
+      "701-0430-00-000"
+    ],
+    "second_stage_start": "20231003",
+    "units_pct_change_min": -0.001,
+    "dollars_weight": 0.1
+  },
+  {
+    "units_weight": 0.8,
+    "cats": [
+      "023"
+    ],
+    "profit_weight": 0.1,
+    "execution_date": "2023-07-24",
+    "publish": true,
+    "superzone_name": "Atlanta",
+    "t_stop": "20240702",
+    "run_type": "in-market",
+    "primary_zone": "011-0080-00-000",
+    "t_start": "20230703",
+    "zones": [
+      "011-0080-00-000",
+      "011-0005-00-000",
+      "011-0033-00-000",
+      "011-0084-00-000",
+      "011-0104-00-000",
+      "011-0139-00-000",
+      "011-0145-00-000",
+      "011-0151-00-000",
+      "011-0240-00-000"
+    ],
+    "second_stage_start": "20231003",
+    "units_pct_change_min": -0.001,
+    "dollars_weight": 0.1
+  },
+  {
+    "units_weight": 0.8,
+    "cats": [
+      "023"
+    ],
+    "profit_weight": 0.1,
+    "execution_date": "2023-07-24",
+    "publish": true,
+    "superzone_name": "Cincinnati",
+    "t_stop": "20240702",
+    "run_type": "in-market",
+    "primary_zone": "014-0700-00-000",
+    "t_start": "20230703",
+    "zones": [
+      "014-0700-00-000",
+      "014-0703-00-000",
+      "014-0900-00-000",
+      "014-0300-00-000"
+    ],
+    "second_stage_start": "20231003",
+    "units_pct_change_min": -0.001,
+    "dollars_weight": 0.1
+  },
+  {
+    "units_weight": 0.8,
+    "cats": [
+      "023"
+    ],
+    "profit_weight": 0.1,
+    "execution_date": "2023-07-24",
+    "publish": true,
+    "superzone_name": "Columbus",
+    "t_stop": "20240702",
+    "run_type": "in-market",
+    "primary_zone": "016-0914-00-000",
+    "t_start": "20230703",
+    "zones": [
+      "016-0914-00-000",
+      "016-0005-00-000",
+      "016-0910-00-000",
+      "016-0913-00-000"
+    ],
+    "second_stage_start": "20231003",
+    "units_pct_change_min": -0.001,
+    "dollars_weight": 0.1
+  },
+  {
+    "units_weight": 0.8,
+    "cats": [
+      "023"
+    ],
+    "profit_weight": 0.1,
+    "execution_date": "2023-07-24",
+    "publish": true,
+    "superzone_name": "Toledo 0975",
+    "t_stop": "20240702",
+    "run_type": "in-market",
+    "primary_zone": "016-0975-00-000",
+    "t_start": "20230703",
+    "zones": [
+      "016-0975-00-000"
+    ],
+    "second_stage_start": "20231003",
+    "units_pct_change_min": -0.001,
+    "dollars_weight": 0.1
+  },
+  {
+    "units_weight": 0.8,
+    "cats": [
+      "023"
+    ],
+    "profit_weight": 0.1,
+    "execution_date": "2023-07-24",
+    "publish": true,
+    "superzone_name": "Michigan",
+    "t_stop": "20240702",
+    "run_type": "in-market",
+    "primary_zone": "018-0700-00-000",
+    "t_start": "20230703",
+    "zones": [
+      "018-0700-00-000",
+      "018-0678-00-000",
+      "018-0980-00-000"
+    ],
+    "second_stage_start": "20231003",
+    "units_pct_change_min": -0.001,
+    "dollars_weight": 0.1
+  },
+  {
+    "units_weight": 0.8,
+    "cats": [
+      "023"
+    ],
+    "profit_weight": 0.1,
+    "execution_date": "2023-07-24",
+    "publish": true,
+    "superzone_name": "Central",
+    "t_stop": "20240702",
+    "run_type": "in-market",
+    "primary_zone": "021-0786-00-000",
+    "t_start": "20230703",
+    "zones": [
+      "021-0786-00-000",
+      "021-0770-00-000",
+      "021-0783-00-000",
+      "021-0785-00-000"
+    ],
+    "second_stage_start": "20231003",
+    "units_pct_change_min": -0.001,
+    "dollars_weight": 0.1
+  },
+  {
+    "units_weight": 0.8,
+    "cats": [
+      "023"
+    ],
+    "profit_weight": 0.1,
+    "execution_date": "2023-07-24",
+    "publish": true,
+    "superzone_name": "Louisville",
+    "t_stop": "20240702",
+    "run_type": "in-market",
+    "primary_zone": "024-0570-00-000",
+    "t_start": "20230703",
+    "zones": [
+      "024-0570-00-000",
+      "024-0253-00-000",
+      "024-0670-00-000",
+      "024-0259-00-000",
+      "024-0547-00-000",
+      "024-0245-00-000"
+    ],
+    "second_stage_start": "20231003",
+    "units_pct_change_min": -0.001,
+    "dollars_weight": 0.1
+  },
+  {
+    "units_weight": 0.8,
+    "cats": [
+      "023"
+    ],
+    "profit_weight": 0.1,
+    "execution_date": "2023-07-24",
+    "publish": true,
+    "superzone_name": "Delta",
+    "t_stop": "20240702",
+    "run_type": "in-market",
+    "primary_zone": "025-0384-00-000",
+    "t_start": "20230703",
+    "zones": [
+      "025-0384-00-000",
+      "025-0382-00-000",
+      "025-0391-00-000",
+      "025-0494-00-000"
+    ],
+    "second_stage_start": "20231003",
+    "units_pct_change_min": -0.001,
+    "dollars_weight": 0.1
+  },
+  {
+    "units_weight": 0.8,
+    "cats": [
+      "023"
+    ],
+    "profit_weight": 0.1,
+    "execution_date": "2023-07-24",
+    "publish": true,
+    "superzone_name": "Roanoke",
+    "t_stop": "20240702",
+    "run_type": "in-market",
+    "primary_zone": "029-0040-00-000",
+    "t_start": "20230703",
+    "zones": [
+      "029-0040-00-000",
+      "029-0029-00-000"
+    ],
+    "second_stage_start": "20231003",
+    "units_pct_change_min": -0.001,
+    "dollars_weight": 0.1
+  },
+  {
+    "units_weight": 0.8,
+    "cats": [
+      "023"
+    ],
+    "profit_weight": 0.1,
+    "execution_date": "2023-07-24",
+    "publish": true,
+    "superzone_name": "Charleston 0016",
+    "t_stop": "20240702",
+    "run_type": "in-market",
+    "primary_zone": "029-0016-00-000",
+    "t_start": "20230703",
+    "zones": [
+      "029-0016-00-000",
+      "029-0018-00-000"
+    ],
+    "second_stage_start": "20231003",
+    "units_pct_change_min": -0.001,
+    "dollars_weight": 0.1
+  },
+  {
+    "units_weight": 0.8,
+    "cats": [
+      "023"
+    ],
+    "profit_weight": 0.1,
+    "execution_date": "2023-07-24",
+    "publish": true,
+    "superzone_name": "Houston",
+    "t_stop": "20240702",
+    "run_type": "in-market",
+    "primary_zone": "034-0095-00-000",
+    "t_start": "20230703",
+    "zones": [
+      "034-0095-00-000",
+      "034-0305-00-000",
+      "034-0350-00-000",
+      "034-0359-00-000"
+    ],
+    "second_stage_start": "20231003",
+    "units_pct_change_min": -0.001,
+    "dollars_weight": 0.1
+  },
+  {
+    "units_weight": 0.8,
+    "cats": [
+      "023"
+    ],
+    "profit_weight": 0.1,
+    "execution_date": "2023-07-24",
+    "publish": true,
+    "superzone_name": "Roundys",
+    "t_stop": "20240702",
+    "run_type": "in-market",
+    "primary_zone": "534-0006-00-000",
+    "t_start": "20230703",
+    "zones": [
+      "534-0006-00-000",
+      "534-0008-00-000",
+      "534-0001-00-000",
+      "534-0002-00-000"
+    ],
+    "second_stage_start": "20231003",
+    "units_pct_change_min": -0.001,
+    "dollars_weight": 0.1
+  },
+  {
+    "units_weight": 0.8,
+    "cats": [
+      "023"
+    ],
+    "profit_weight": 0.1,
+    "execution_date": "2023-07-24",
+    "publish": true,
+    "superzone_name": "Dillons 0440",
+    "t_stop": "20240702",
+    "run_type": "in-market",
+    "primary_zone": "615-0440-00-000",
+    "t_start": "20230703",
+    "zones": [
+      "615-0440-00-000"
+    ],
+    "second_stage_start": "20231003",
+    "units_pct_change_min": -0.001,
+    "dollars_weight": 0.1
+  },
+  {
+    "units_weight": 0.8,
+    "cats": [
+      "023"
+    ],
+    "profit_weight": 0.1,
+    "execution_date": "2023-07-24",
+    "publish": true,
+    "superzone_name": "Dillons",
+    "t_stop": "20240702",
+    "run_type": "in-market",
+    "primary_zone": "615-0446-00-000",
+    "t_start": "20230703",
+    "zones": [
+      "615-0446-00-000",
+      "615-0403-00-000",
+      "615-0413-00-000"
+    ],
+    "second_stage_start": "20231003",
+    "units_pct_change_min": -0.001,
+    "dollars_weight": 0.1
+  },
+  {
+    "units_weight": 0.8,
+    "cats": [
+      "023"
+    ],
+    "profit_weight": 0.1,
+    "execution_date": "2023-07-24",
+    "publish": true,
+    "superzone_name": "King Soopers",
+    "t_stop": "20240702",
+    "run_type": "in-market",
+    "primary_zone": "620-0812-00-000",
+    "t_start": "20230703",
+    "zones": [
+      "620-0812-00-000",
+      "620-0808-00-000",
+      "620-0901-00-000",
+      "620-0930-00-000",
+      "620-0931-00-000"
+    ],
+    "second_stage_start": "20231003",
+    "units_pct_change_min": -0.001,
+    "dollars_weight": 0.1
+  },
+  {
+    "units_weight": 0.8,
+    "cats": [
+      "023"
+    ],
+    "profit_weight": 0.1,
+    "execution_date": "2023-07-24",
+    "publish": true,
+    "superzone_name": "Frys",
+    "t_stop": "20240702",
+    "run_type": "in-market",
+    "primary_zone": "660-0501-00-000",
+    "t_start": "20230703",
+    "zones": [
+      "660-0501-00-000"
+    ],
+    "second_stage_start": "20231003",
+    "units_pct_change_min": -0.001,
+    "dollars_weight": 0.1
+  },
+  {
+    "units_weight": 0.8,
+    "cats": [
+      "023"
+    ],
+    "profit_weight": 0.1,
+    "execution_date": "2023-07-24",
+    "publish": true,
+    "superzone_name": "Fred Meyer",
+    "t_stop": "20240702",
+    "run_type": "in-market",
+    "primary_zone": "701-0423-00-000",
+    "t_start": "20230703",
+    "zones": [
+      "701-0423-00-000",
+      "701-0415-00-000",
+      "701-0460-00-000",
+      "701-0449-00-000"
+    ],
+    "second_stage_start": "20231003",
+    "units_pct_change_min": -0.001,
+    "dollars_weight": 0.1
+  },
+  {
+    "units_weight": 0.8,
+    "cats": [
+      "023"
+    ],
+    "profit_weight": 0.1,
+    "execution_date": "2023-07-24",
+    "publish": true,
+    "superzone_name": "Smiths 0300",
+    "t_stop": "20240702",
+    "run_type": "in-market",
+    "primary_zone": "706-0300-00-000",
+    "t_start": "20230703",
+    "zones": [
+      "706-0300-00-000"
+    ],
+    "second_stage_start": "20231003",
+    "units_pct_change_min": -0.001,
+    "dollars_weight": 0.1
+  },
+  {
+    "units_weight": 0.8,
+    "cats": [
+      "023"
+    ],
+    "profit_weight": 0.1,
+    "execution_date": "2023-07-24",
+    "publish": true,
+    "superzone_name": "Smiths 0308",
+    "t_stop": "20240702",
+    "run_type": "in-market",
+    "primary_zone": "706-0308-00-000",
+    "t_start": "20230703",
+    "zones": [
+      "706-0308-00-000"
+    ],
+    "second_stage_start": "20231003",
+    "units_pct_change_min": -0.001,
+    "dollars_weight": 0.1
+  }
+]

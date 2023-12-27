@@ -1,6 +1,5 @@
 package com.kroger.ngpp.ingress.client.invoker;
 
-import com.kroger.dcp.echoclient.EventType;
 import com.kroger.desp.events.effo.data.ready.EffoDataReady;
 //import com.kroger.ngpp.boot.autoconfigure.security.oauth.WebClientWrapper;
 import com.kroger.ngpp.common.boot.autoconfigure.security.oauth.WebClientWrapper;
@@ -38,9 +37,9 @@ public class DefaultOptimizedDeliveryServiceInvoker implements OptimizedDelivery
                 builder.mapQueryParameters(model),
                 urlString
         );
-        logger.sendMessage(EventType.INFO, "OptimizedDeliveryServiceInvoker##  batchId =  " + model.getPayload().getBatchId()
+        logger.sendMessage("INFO", "OptimizedDeliveryServiceInvoker##  batchId =  " + model.getPayload().getBatchId()
                         + " runType = " + model.getPayload().getRunType() + ", QualifiedURL: " + qualifiedUrl,
-                OPTIMIZED_DELIVERY_RESPONSE, DefaultOptimizedDeliveryServiceInvoker.class.getSimpleName(), new HashMap<>() {{
+                 DefaultOptimizedDeliveryServiceInvoker.class.getSimpleName(), new HashMap<>() {{
                     put(SERVICE_LOG_KEY.asString(), OPTIMIZED_DELIVERY_RESPONSE.getText());
                     put(BATCH_ID.asString(), model.getPayload().getBatchId());
                     put(RUN_TYPE.asString(), model.getPayload().getRunType());

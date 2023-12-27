@@ -1,6 +1,5 @@
 package com.kroger.ngpp.ingress.client.invoker;
 
-import com.kroger.dcp.echoclient.EventType;
 import com.kroger.ngpp.common.logging.IRegularPriceOptimizationLogger;
 import com.kroger.ngpp.ingress.mock.MockUrlSuccess;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,9 +23,9 @@ public class OptimizedDeliveryServiceConfig {
     OptimizedDeliveryServiceInvoker mockService(
             @Value("${rpo.optimizedDelivery.mock.urls:https://test.kroger.com}") String[] urls
     ) {
-        logger.sendMessage(EventType.INFO,
+        logger.sendMessage("INFO",
                 "Provided OptimizedDeliveryServiceInvoker is MockSingleUrlSuccess",
-                OPTIMIZED_DELIVERY_INVOCATION_SUCCESS, OptimizedDeliveryServiceConfig.class.getSimpleName(), new HashMap<>()
+                OptimizedDeliveryServiceConfig.class.getSimpleName(), new HashMap<>()
         );
         return new MockUrlSuccess(urls);
     }
@@ -34,9 +33,9 @@ public class OptimizedDeliveryServiceConfig {
     @Bean
     @ConditionalOnProperty(name = "rpo.optimizedDelivery.mock.enabled", matchIfMissing = true, havingValue = "false")
     OptimizedDeliveryServiceInvoker service() {
-        logger.sendMessage(EventType.INFO,
+        logger.sendMessage("INFO",
                 "Provided OptimizedDeliveryServiceInvoker is DefaultOptimizedDeliveryServiceInvoker",
-                OPTIMIZED_DELIVERY_INVOCATION_SUCCESS, OptimizedDeliveryServiceConfig.class.getSimpleName(), new HashMap<>()
+                OptimizedDeliveryServiceConfig.class.getSimpleName(), new HashMap<>()
         );
         return new DefaultOptimizedDeliveryServiceInvoker();
     }
