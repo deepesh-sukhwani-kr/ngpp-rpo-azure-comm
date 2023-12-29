@@ -1,16 +1,23 @@
 package com.kroger.ngpp.ingress.config;
 
 import com.kroger.commons.boot.autoconfigure.krypt.aes.KryptPropertySourceAutoConfiguration;
+import com.kroger.commons.security.oauth.AbstractOAuth2ClientWebSecurityConfiguration;
+import com.kroger.commons.security.oauth.KrogerSecurityMiscellany;
+import com.kroger.commons.security.oauth.OAuthSecurity;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.oauth2.client.OAuth2RestTemplate;
-import org.springframework.security.oauth2.client.token.grant.client.ClientCredentialsResourceDetails;
+import org.springframework.security.oauth2.client.registration.ClientRegistration;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.http.converter.protobuf.ProtobufJsonFormatHttpMessageConverter;
+import org.springframework.security.oauth2.core.http.converter.OAuth2AccessTokenResponseHttpMessageConverter;
+import org.springframework.security.oauth2.client.http.OAuth2ErrorResponseErrorHandler;
 
 @Configuration
 @EnableConfigurationProperties
@@ -21,31 +28,36 @@ import org.springframework.security.oauth2.client.token.grant.client.ClientCrede
         "org.springframework.security.oauth2.client.OAuth2RestTemplate"})
 @AutoConfigureAfter({
         KryptPropertySourceAutoConfiguration.class})
-public class SimplicityOAuthBoostrapCredentialsConfiguration {
+public class SimplicityOAuthBoostrapCredentialsConfiguration  extends AbstractOAuth2ClientWebSecurityConfiguration
+{
+    private static final String clientRegistrationId = "kroger-service";
+    private RestTemplateBuilder restTemplateBuilder;
 
-    /**
-     * Fetch the configuration details from boostrap.yml file and set to the client credential details
-     *
-     * @return
-     */
-    @Bean
-    @Qualifier("simpleOptimizedRestResource")
-    @ConfigurationProperties("kroger.simplicity.security.oauth2.client")
-    public ClientCredentialsResourceDetails simpleOptimizedResourceDetails() {
-        ClientCredentialsResourceDetails clientCredentialsResourceDetails = new ClientCredentialsResourceDetails();
-        return clientCredentialsResourceDetails;
+    @Bean("oauth2RestTemplate")
+    public RestTemplate oAuth2RestTemplate()
+    {
+        KrogerSecurityMiscellany securityMiscellany = this.securityMiscellany();
+        ClientRegistration clientRegistration = securityMiscellany
+                .client().getClientRegistrationRepository()
+                .findByRegistrationId(clientRegistrationId);
+
+        if (null == clientRegistration)
+        {
+            throw new IllegalArgumentException(
+                    ("Invalid Client Registration with ID:" + clientRegistrationId));
+        }
+
+
+        return restTemplateBuilder
+                .messageConverters(new ProtobufJsonFormatHttpMessageConverter(),
+                        new OAuth2AccessTokenResponseHttpMessageConverter())
+                .errorHandler((new OAuth2ErrorResponseErrorHandler()))
+                .basicAuthentication(clientRegistration.getClientId(),
+                        clientRegistration.getClientSecret()).build();
     }
 
-    /**
-     * Autowire the above resource configuration, pass it as an argument to create the rest template for connecting ingress controller
-     *
-     * @param resource
-     * @return
-     */
-    @Bean("simpleOauth2RestTemplateConfig")
-    public OAuth2RestTemplate optimizedRestTemplate(@Qualifier("simpleOptimizedRestResource") ClientCredentialsResourceDetails resource) {
-        OAuth2RestTemplate restTemplate = new OAuth2RestTemplate(resource);
-        return restTemplate;
-    }
+    @Override
+    protected void configure(OAuthSecurity oAuthSecurity) throws Exception {
 
+    }
 }

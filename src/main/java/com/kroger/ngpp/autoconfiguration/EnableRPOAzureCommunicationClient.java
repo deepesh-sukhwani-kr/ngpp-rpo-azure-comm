@@ -11,7 +11,7 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-@Import(RPOAzureCommConfiguration.class)
+//@Import(RPOAzureCommConfiguration.class)
 @EnableCaching
 @EnableRPOCommonClient
 public @interface EnableRPOAzureCommunicationClient {

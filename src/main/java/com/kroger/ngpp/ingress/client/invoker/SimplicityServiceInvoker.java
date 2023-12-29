@@ -1,6 +1,6 @@
 package com.kroger.ngpp.ingress.client.invoker;
 
-import com.kroger.ngpp.ingress.client.SimpleOauthRestClient;
+import com.kroger.ngpp.ingress.client.SimpleOauthWebClient;
 import com.kroger.ngpp.ingress.client.builder.SimpleUrlBuilder;
 import com.kroger.ngpp.ingress.model.RpoSmsParam;
 import com.kroger.ngpp.ingress.model.SimpleDeliveryModel;
@@ -17,13 +17,13 @@ public class SimplicityServiceInvoker implements SimpleServiceInvoker {
     @Value("${rpo.simplicity.url: test}")
     private String urlString;
 
-    private final SimpleOauthRestClient restClient;
+    private final SimpleOauthWebClient webClient;
 
     private final SimpleUrlBuilder builder;
 
 
-    public SimplicityServiceInvoker(SimpleOauthRestClient restClient, SimpleUrlBuilder builder) {
-        this.restClient = restClient;
+    public SimplicityServiceInvoker(SimpleOauthWebClient webClient, SimpleUrlBuilder builder) {
+        this.webClient = webClient;
         this.builder = builder;
     }
 
@@ -35,8 +35,8 @@ public class SimplicityServiceInvoker implements SimpleServiceInvoker {
                 urlString
         );
         log.info("SimplicityServiceInvoker::qualifiedUrl = " + qualifiedUrl);
-        return restClient.invokeGetOperation(
-                qualifiedUrl, SimpleDeliveryModel.class);
+        return webClient.invokeGetOperation(
+                qualifiedUrl, SimpleDeliveryModel.class).block();
     }
 
 }
