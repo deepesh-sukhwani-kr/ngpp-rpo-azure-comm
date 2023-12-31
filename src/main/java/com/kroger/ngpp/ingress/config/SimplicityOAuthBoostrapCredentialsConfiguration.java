@@ -21,7 +21,7 @@ import org.springframework.security.oauth2.client.http.OAuth2ErrorResponseErrorH
 
 @Configuration
 @EnableConfigurationProperties
-@ConditionalOnProperty(value = "kroger.security.oauth.auto-configure.enabled", matchIfMissing =
+@ConditionalOnProperty(value = "kroger.azure.security.oauth.auto-configure.enabled", matchIfMissing =
         true)
 @ConditionalOnClass(name = {
         "org.springframework.security.oauth2.client.token.grant.client.ClientCredentialsResourceDetails",
