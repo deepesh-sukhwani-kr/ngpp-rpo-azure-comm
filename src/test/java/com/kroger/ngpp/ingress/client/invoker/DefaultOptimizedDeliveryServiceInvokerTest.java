@@ -1,7 +1,7 @@
 package com.kroger.ngpp.ingress.client.invoker;
 
 import com.kroger.desp.events.effo.data.ready.EffoDataReady;
-import com.kroger.ngpp.common.boot.autoconfigure.security.oauth.WebClientWrapper;
+import com.kroger.ngpp.boot.autoconfigure.security.oauth.WebClientWrapper;
 import com.kroger.ngpp.common.logging.IRegularPriceOptimizationLogger;
 import com.kroger.ngpp.ingress.client.builder.UrlBuilder;
 import com.kroger.ngpp.ingress.model.OptimizedDeliveryModel;
@@ -45,7 +45,7 @@ class DefaultOptimizedDeliveryServiceInvokerTest {
     private Object NullPointerException;
 
     @Before
-    void setUp() {
+    public void setUp() {
         invoker = new DefaultOptimizedDeliveryServiceInvoker();
         optimizedDeliveryModel = new OptimizedDeliveryModel(
                 Arrays.asList("First message", "Second message", "Third message"));
