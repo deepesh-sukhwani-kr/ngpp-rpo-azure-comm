@@ -14,6 +14,7 @@ import static com.kroger.ngpp.common.logging.RegularPriceOptimizationLogFieldTyp
 import static com.kroger.ngpp.common.logging.RegularPriceOptimizationLogFieldType.RUN_TYPE;
 import static com.kroger.ngpp.common.logging.RegularPriceOptimizationLogFieldType.SERVICE_LOG_KEY;
 import static com.kroger.ngpp.common.logging.RegularPriceOptimizationServiceLogKeys.OPTIMIZED_DELIVERY_RESPONSE;
+import static com.kroger.ngpp.util.ClientRegistrationEnum.OPTIMIZATION_SERVICE;
 
 public class DefaultOptimizedDeliveryServiceInvoker implements OptimizedDeliveryServiceInvoker {
 
@@ -44,7 +45,7 @@ public class DefaultOptimizedDeliveryServiceInvoker implements OptimizedDelivery
                     put(RUN_TYPE.asString(), model.getPayload().getRunType());
                 }}
         );
-        OptimizedDeliveryModel response = webClient.GET("optimizationService",
+        OptimizedDeliveryModel response = webClient.GET(OPTIMIZATION_SERVICE.getId(),
                 qualifiedUrl, OptimizedDeliveryModel.class).block();
         return response;
     }

@@ -16,8 +16,8 @@ public abstract class SimpleMediator {
     }
 
 
-    protected ResponseEntity<SimpleDeliveryModel> getSettingsResponse(RpoSmsParam model) {
-        ResponseEntity<SimpleDeliveryModel> response;
+    protected SimpleDeliveryModel getSettingsResponse(RpoSmsParam model) {
+        SimpleDeliveryModel response;
         try {
             response = serviceInvoker.getSimplicityResponse(model);
         } catch (NullPointerException nex) {

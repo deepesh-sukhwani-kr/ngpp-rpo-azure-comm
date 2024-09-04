@@ -60,7 +60,7 @@ class DefaultOptimizedDeliveryServiceInvokerTest {
                 Arrays.asList("First message", "Second message", "Third message"));
 
         Mono<OptimizedDeliveryModel> mono = Mono.just(optimizedDeliveryModel);
-        String clientResistrationId = "optimizationService";
+        String clientResistrationId = "optimization-service";
         when(webClientWrapper.GET(clientResistrationId,
                 "test", OptimizedDeliveryModel.class)).thenReturn(mono);
         OptimizedDeliveryModel response = invoker.getOptimizedDeliveryResponse(mock);
