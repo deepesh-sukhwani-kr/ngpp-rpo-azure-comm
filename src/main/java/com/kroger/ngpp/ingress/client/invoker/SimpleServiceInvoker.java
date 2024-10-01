@@ -6,6 +6,6 @@ import org.springframework.http.ResponseEntity;
 
 public interface SimpleServiceInvoker {
 
-    ResponseEntity<SimpleDeliveryModel> getSimplicityResponse(RpoSmsParam model);
+    SimpleDeliveryModel getSimplicityResponse(RpoSmsParam model);
 
 }

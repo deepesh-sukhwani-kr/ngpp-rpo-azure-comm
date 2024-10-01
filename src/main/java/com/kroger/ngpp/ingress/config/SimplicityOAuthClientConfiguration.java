@@ -9,7 +9,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
-import org.springframework.security.oauth2.client.OAuth2RestTemplate;
 
 @Configuration
 @EnableConfigurationProperties
@@ -19,8 +18,6 @@ import org.springframework.security.oauth2.client.OAuth2RestTemplate;
         "org.springframework.cloud.config.client.ConfigServicePropertySourceLocator",
         "org.springframework.cloud.config.client.ConfigClientProperties",
         "org.springframework.security.oauth2.client.OAuth2RestTemplate"})
-@AutoConfigureAfter({
-        SimplicityOAuthBoostrapCredentialsConfiguration.class})
 public class SimplicityOAuthClientConfiguration {
 
     /**

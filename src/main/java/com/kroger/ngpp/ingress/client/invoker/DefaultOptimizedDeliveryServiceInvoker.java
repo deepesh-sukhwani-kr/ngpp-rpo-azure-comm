@@ -1,13 +1,12 @@
 package com.kroger.ngpp.ingress.client.invoker;
 
 import com.kroger.desp.events.effo.data.ready.EffoDataReady;
+import com.kroger.ngpp.boot.autoconfigure.security.oauth.WebClientWrapper;
 import com.kroger.ngpp.common.logging.IRegularPriceOptimizationLogger;
-import com.kroger.ngpp.ingress.client.OAuthRestClient;
 import com.kroger.ngpp.ingress.client.builder.UrlBuilder;
 import com.kroger.ngpp.ingress.model.OptimizedDeliveryModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.ResponseEntity;
 
 import java.util.HashMap;
 
@@ -15,6 +14,7 @@ import static com.kroger.ngpp.common.logging.RegularPriceOptimizationLogFieldTyp
 import static com.kroger.ngpp.common.logging.RegularPriceOptimizationLogFieldType.RUN_TYPE;
 import static com.kroger.ngpp.common.logging.RegularPriceOptimizationLogFieldType.SERVICE_LOG_KEY;
 import static com.kroger.ngpp.common.logging.RegularPriceOptimizationServiceLogKeys.OPTIMIZED_DELIVERY_RESPONSE;
+import static com.kroger.ngpp.util.ClientRegistrationEnum.OPTIMIZATION_SERVICE;
 
 public class DefaultOptimizedDeliveryServiceInvoker implements OptimizedDeliveryServiceInvoker {
 
@@ -22,7 +22,7 @@ public class DefaultOptimizedDeliveryServiceInvoker implements OptimizedDelivery
     private String urlString;
 
     @Autowired
-    private OAuthRestClient restClient;
+    private WebClientWrapper webClient;
 
     @Autowired
     private UrlBuilder builder;
@@ -31,7 +31,7 @@ public class DefaultOptimizedDeliveryServiceInvoker implements OptimizedDelivery
     IRegularPriceOptimizationLogger logger;
 
     @Override
-    public ResponseEntity<OptimizedDeliveryModel> getOptimizedDeliveryResponse(
+    public OptimizedDeliveryModel getOptimizedDeliveryResponse(
             EffoDataReady model) {
         String qualifiedUrl = builder.buildIngresControllerURL(
                 builder.mapQueryParameters(model),
@@ -45,8 +45,8 @@ public class DefaultOptimizedDeliveryServiceInvoker implements OptimizedDelivery
                     put(RUN_TYPE.asString(), model.getPayload().getRunType());
                 }}
         );
-        ResponseEntity<OptimizedDeliveryModel> response = restClient.invokeGetOperation(
-                qualifiedUrl, OptimizedDeliveryModel.class);
+        OptimizedDeliveryModel response = webClient.GET(OPTIMIZATION_SERVICE.getId(),
+                qualifiedUrl, OptimizedDeliveryModel.class).block();
         return response;
     }
 

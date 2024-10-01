@@ -34,7 +34,7 @@ public abstract class BaseMediator {
     public abstract String getType();
 
     protected ResponseEntity<OptimizedDeliveryModel> getIngressResponse(EffoDataReady dataReady) {
-        ResponseEntity<OptimizedDeliveryModel> response;
+        OptimizedDeliveryModel response;
         if(!utils.isDataReadyMessageValid(dataReady)) {
             logger.sendMessage("INFO",
                     BATCH_INPUT_VALIDATION_MESSAGE +dataReady,
@@ -49,7 +49,7 @@ public abstract class BaseMediator {
         } catch (Exception e) {
             throw new RuntimeException(INGRESS_INVOCATION_MESSAGE +e);
         }
-        return response;
+        return ResponseEntity.ok(response);
     }
 
 }

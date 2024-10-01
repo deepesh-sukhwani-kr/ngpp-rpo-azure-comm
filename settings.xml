@@ -14,7 +14,7 @@
                 <repository>
                     <id>artcentral</id>
                     <name>libs-release</name>
-                    <url>https://artifactory-edge.kroger.com/artifactory/libs-release</url>
+                    <url>https://krogertechnology.jfrog.io/artifactory/libs-release</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
@@ -25,7 +25,7 @@
                 <repository>
                     <id>artsnapshots</id>
                     <name>libs-snapshot</name>
-                    <url>https://artifactory-edge.kroger.com/artifactory/libs-snapshot</url>
+                    <url>https://krogertechnology.jfrog.io/artifactory/libs-snapshot</url>
                     <releases>
                         <enabled>false</enabled>
                     </releases>
@@ -38,7 +38,7 @@
                 <pluginRepository>
                     <id>artcentral</id>
                     <name>plugins-release</name>
-                    <url>https://artifactory-edge.kroger.com/artifactory/plugins-release</url>
+                    <url>https://krogertechnology.jfrog.io/artifactory/plugins-release</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
@@ -49,7 +49,7 @@
                 <pluginRepository>
                     <id>artsnapshots</id>
                     <name>plugins-snapshot</name>
-                    <url>https://artifactory-edge.kroger.com/artifactory/plugins-snapshot</url>
+                    <url>https://krogertechnology.jfrog.io/artifactory/plugins-snapshot</url>
                     <releases>
                         <enabled>false</enabled>
                     </releases>
@@ -65,17 +65,17 @@
         <server>
             <id>artcentral</id>
             <username>${env.ARTIFACTORY_SAAS_USERNAME}</username>
-            <password>${env.ARTIFACTORY_EDGE_TOKEN}</password>
+            <password>${env.ARTIFACTORY_SAAS_TOKEN}</password>
         </server>
         <server>
             <id>artsnapshots</id>
             <username>${env.ARTIFACTORY_SAAS_USERNAME}</username>
-            <password>${env.ARTIFACTORY_EDGE_TOKEN}</password>
+            <password>${env.ARTIFACTORY_SAAS_TOKEN}</password>
         </server>
         <server>
             <id>artifactory</id>
             <username>${env.ARTIFACTORY_SAAS_USERNAME}</username>
-            <password>${env.ARTIFACTORY_EDGE_TOKEN}</password>
+            <password>${env.ARTIFACTORY_SAAS_TOKEN}</password>
         </server>
     </servers>
 
@@ -83,7 +83,7 @@
         <mirror>
             <id>artremote</id>
             <mirrorOf>*,!artcentral,!artsnapshots,!artremote,!central</mirrorOf>
-            <url>https://artifactory-edge.kroger.com/artifactory/remote-repos</url>
+            <url>https://krogertechnology.jfrog.io/artifactory/remote-repos</url>
         </mirror>
     </mirrors>
 

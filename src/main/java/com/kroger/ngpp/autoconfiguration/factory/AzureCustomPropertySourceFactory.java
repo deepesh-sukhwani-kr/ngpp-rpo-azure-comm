@@ -21,22 +21,23 @@ public class AzureCustomPropertySourceFactory implements PropertySourceFactory {
     @Override
     public PropertySource<?> createPropertySource(String name, EncodedResource encodedResource) {
         String activeProfile = Optional.ofNullable(System.getenv("SPRING_PROFILES_ACTIVE"))
-                .orElse(System.getProperty("spring.profiles.active"));
-
+                .orElse("cloud");
+        System.out.println("RegularPriceOptimization - Profiles passed from deployment configs: "+ activeProfile);
         YamlPropertiesFactoryBean yamlFactory = new YamlPropertiesFactoryBean();
         yamlFactory.setDocumentMatchers(properties -> {
-            String profileProperty = properties.getProperty("spring.profiles");
-            System.out.println("Hi RPO: profile is: "+properties.getProperty("spring.profiles"));
-            if (StringUtils.isEmpty(profileProperty)) {
+            String profileFromApplication = properties.getProperty("spring.config.activate.on-profile");
+            if (!StringUtils.hasLength(profileFromApplication)) {
                 return ABSTAIN;
             }
-            YamlProcessor.MatchStatus profileContains = activeProfile.contains(profileProperty) ? FOUND : NOT_FOUND;
-            return profileContains;
+            YamlProcessor.MatchStatus isAProfileMatch = activeProfile.contains(profileFromApplication) ? FOUND : NOT_FOUND;
+            if (isAProfileMatch.equals(FOUND)) {
+                System.out.println("RegularPriceOptimization - Profile match found: "+profileFromApplication);
+            }
+            return isAProfileMatch;
         });
         yamlFactory.setResources(encodedResource.getResource());
         Properties properties = yamlFactory.getObject();
-        System.out.println("Hi RPO: Active profiles are: "+ activeProfile);
-        System.out.println("Hi RPO: Properties are: "+ properties);
+        System.out.println("RegularPriceOptimization - Configuration properties are: "+ properties);
         return new PropertiesPropertySource(Objects.requireNonNull(encodedResource.getResource().getFilename()), properties);
     }
 }
