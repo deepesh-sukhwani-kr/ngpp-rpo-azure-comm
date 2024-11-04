@@ -7,15 +7,16 @@ import com.kroger.ngpp.ingress.client.builder.UrlBuilder;
 import com.kroger.ngpp.ingress.model.OptimizedDeliveryModel;
 import com.kroger.ngpp.testutils.Utils;
 import lombok.val;
-import org.junit.Assert;
-import org.junit.Before;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import reactor.core.publisher.Mono;
+
+import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
@@ -44,9 +45,8 @@ class DefaultOptimizedDeliveryServiceInvokerTest {
 
     private Object NullPointerException;
 
-    @Before
+    @BeforeEach
     public void setUp() {
-        invoker = new DefaultOptimizedDeliveryServiceInvoker();
         optimizedDeliveryModel = new OptimizedDeliveryModel(
                 Arrays.asList("First message", "Second message", "Third message"));
     }
@@ -64,14 +64,14 @@ class DefaultOptimizedDeliveryServiceInvokerTest {
         when(webClientWrapper.GET(clientResistrationId,
                 "test", OptimizedDeliveryModel.class)).thenReturn(mono);
         OptimizedDeliveryModel response = invoker.getOptimizedDeliveryResponse(mock);
-        Assert.assertEquals(optimizedDeliveryModel, response);
+        Assertions.assertEquals(optimizedDeliveryModel, response);
     }
 
     @Test
     void testInvalidtOptimizedDeliveryResponse() {
         when(builder.buildIngresControllerURL(builder.mapQueryParameters(null), null))
-                .thenThrow(NullPointerException.class);
-        val exception =   Assertions.assertThrows(Exception.class, () ->invoker.getOptimizedDeliveryResponse(null));
-        assertEquals(NullPointerException, exception.getLocalizedMessage());
+                .thenThrow(new NullPointerException());
+        NullPointerException exception = Assertions.assertThrows(NullPointerException.class, () -> invoker.getOptimizedDeliveryResponse(null));
+        assertNull(exception.getMessage());
     }
 }
